@@ -74,4 +74,4 @@ set(CMAKE_DEPFILE_FLAGS_CXX "-MD -MF <OBJECT>.d")
 set(CMAKE_C_DEPFILE_FORMAT gcc)
 
 set(USBH_DIR "${NXDK_DIR}/lib/usb")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -I${USBH_DIR}/libusbohci/inc -I${USBH_DIR}/libusbohci_xbox/ -DUSBH_USE_EXTERNAL_CONFIG=\"usbh_config_xbox.h\"")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -I${USBH_DIR}/libusbohci/inc -I${USBH_DIR}/libusbohci_xbox/ -DUSBH_USE_EXTERNAL_CONFIG=\\\"usbh_config_xbox.h\\\"")
