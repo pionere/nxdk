@@ -29,6 +29,8 @@ set(CMAKE_C_STANDARD_INCLUDE_DIRECTORIES
         "${NXDK_DIR}/lib/xboxrt/libc_extensions"
         "${NXDK_DIR}/lib/pdclib/include"
         "${NXDK_DIR}/lib/pdclib/platform/xbox/include"
+        "${NXDK_DIR}/lib/usb/libusbohci/inc"
+        "${NXDK_DIR}/lib/usb/libusbohci_xbox"
         "${NXDK_DIR}/lib/winapi"
         "${NXDK_DIR}/lib/xboxrt/vcruntime"
 )
@@ -43,6 +45,8 @@ set(CMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES
         "${NXDK_DIR}/lib/xboxrt/libc_extensions"
         "${NXDK_DIR}/lib/pdclib/include"
         "${NXDK_DIR}/lib/pdclib/platform/xbox/include"
+        "${NXDK_DIR}/lib/usb/libusbohci/inc"
+        "${NXDK_DIR}/lib/usb/libusbohci_xbox"
         "${NXDK_DIR}/lib/winapi"
         "${NXDK_DIR}/lib/xboxrt/vcruntime"
 )
