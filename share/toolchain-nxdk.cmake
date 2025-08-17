@@ -29,8 +29,6 @@ set(CMAKE_C_STANDARD_INCLUDE_DIRECTORIES
         "${NXDK_DIR}/lib/xboxrt/libc_extensions"
         "${NXDK_DIR}/lib/pdclib/include"
         "${NXDK_DIR}/lib/pdclib/platform/xbox/include"
-        "${NXDK_DIR}/lib/usb/libusbohci/inc"
-        "${NXDK_DIR}/lib/usb/libusbohci_xbox"
         "${NXDK_DIR}/lib/winapi"
         "${NXDK_DIR}/lib/xboxrt/vcruntime"
 )
@@ -45,8 +43,6 @@ set(CMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES
         "${NXDK_DIR}/lib/xboxrt/libc_extensions"
         "${NXDK_DIR}/lib/pdclib/include"
         "${NXDK_DIR}/lib/pdclib/platform/xbox/include"
-        "${NXDK_DIR}/lib/usb/libusbohci/inc"
-        "${NXDK_DIR}/lib/usb/libusbohci_xbox"
         "${NXDK_DIR}/lib/winapi"
         "${NXDK_DIR}/lib/xboxrt/vcruntime"
 )
@@ -76,3 +72,6 @@ set(PKG_CONFIG_EXECUTABLE "${NXDK_DIR}/bin/nxdk-pkg-config" CACHE STRING "Path t
 set(CMAKE_DEPFILE_FLAGS_C "-MD -MF <OBJECT>.d")
 set(CMAKE_DEPFILE_FLAGS_CXX "-MD -MF <OBJECT>.d")
 set(CMAKE_C_DEPFILE_FORMAT gcc)
+
+set(USBH_DIR "${NXDK_DIR}/lib/usb")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -I$(USBH_DIR)/libusbohci/inc -I$(USBH_DIR)/libusbohci_xbox/ -DUSBH_USE_EXTERNAL_CONFIG=\"usbh_config_xbox.h\")
