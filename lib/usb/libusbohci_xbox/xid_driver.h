@@ -4,7 +4,8 @@
 #ifndef _USBH_XID_H_
 #define _USBH_XID_H_
 
-#include "usb.h"
+//#include "usb.h"
+#include <usb/libusbohci/inc/hub.h>
 
 #ifdef __cplusplus
 extern "C"
